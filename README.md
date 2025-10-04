@@ -12,7 +12,6 @@ This is my personal website where I showcase my portfolio and blog about web dev
 - [GitHub](https://github.com)
 - [LinkedIn](https://linkedin.com)
 - etc...
--vcvcv
 
 ## Pages
 
