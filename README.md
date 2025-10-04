@@ -1,4 +1,4 @@
-# Personal Website
+# Personal Website Davia Sherin Faraghiza
 
 This is my personal website where I showcase my portfolio and blog about web development.
 
