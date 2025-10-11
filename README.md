@@ -1,22 +1,25 @@
-# Personal Website Davia Sherin Faraghiza
+🌐 Personal Website 
 
-This is my personal website where I showcase my portfolio and blog about web development.
+This is my personal website where I showcase my portfolio and share my passion for UI/UX design. 
+I focus on creating user-friendly and visually engaging digital experiences.
 
 ## Links
 
-- [My Portfolio](https://myportfolio.com)
 - [UI/UX Design Resources](https://www.figma.com/design/i48G6G043bKJyyJgeYSFWK/personal-web-davia?node-id=0-1&t=31HSyLNQY1SZ63Wz-1)
 
 ## Social Media
 
-- [GitHub](https://github.com)
-- [LinkedIn](https://linkedin.com)
-- etc...
+- [GitHub](https://github.com/daviasherin07/portofolio.git)
+- [LinkedIn](https://www.linkedin.com/in/davia-sherin-2a0669382/)
+- [Instragam](https://www.instagram.com/dviashrn?igsh=aGkzYmUwbXF4eGM3)
 
 ## Pages
 
 - Home
 - About
+- Project
+- Skill
+- Contact
 
 ## Technologies Used
 
@@ -26,4 +29,4 @@ This is my personal website where I showcase my portfolio and blog about web dev
 
 ## Preview
 
-- ![Website Preview](link_to_screenshot.png)
+- ![Website Preview](assets/home.png)
