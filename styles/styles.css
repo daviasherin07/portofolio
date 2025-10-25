@@ -1,0 +1,615 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #d9d9d9;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== HOME SECTION ===== */
+/* NAVBAR */
+.navbar {
+  background-color: #555;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ffff00;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  height: 100vh;
+}
+
+.hero-left {
+  flex: 0.4; 
+  background-color: #0f0f0f;
+  padding: 100px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-right {
+  flex: 0.6;
+  position: relative;
+  background-color: #c8c8c8;
+  overflow: hidden;
+}
+
+.hero-right img.pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8; 
+}
+
+/* TEXT STYLE */
+.intro {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.tagline {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  background-color: #ffff00;
+  color: #000;
+  padding: 2px 4px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0 40px 0;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.15);
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background-color: #f2f2f2;
+  color: #000;
+  padding: 10px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #e6e6e6;
+  transform: translateY(-2px);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  background-color: #d9d9d9;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 60px;
+}
+
+/* CONTAINER */
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- FOTO --- */
+.about-image {
+  position: relative;
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-frame {
+  position: relative;
+  background-color: #000;
+  padding: 25px;
+  display: inline-block;
+}
+
+.image-frame img {
+  display: block;
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  border: 6px solid #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/* Titik Kuning */
+.dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: yellow;
+  border-radius: 50%;
+  z-index: 3;
+}
+.dot.top-right {
+  top: 12px;
+  right: 12px;
+}
+.dot.bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+
+/* --- TEKS --- */
+.about-content {
+  background-color: #ececec;
+  padding: 50px 70px;
+  border-radius: 12px;
+  flex: 1 1 400px;
+  min-height: 480px; 
+  position: relative;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.highlight {
+  background-color: yellow;
+  padding: 0 6px;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+/* Kutipan */
+.quote-icon {
+  font-size: 3.5rem;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  color: #000;
+}
+
+.quote-end {
+  font-size: 3.5rem;
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-content {
+    width: 90%;
+    min-height: auto;
+  }
+}
+
+/* ===== PROJECT SECTION ===== */
+.project {
+  background-color: #a8a8a8;
+  padding: 80px 60px;
+}
+
+.project .section-title {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+/* PROJECT CARD */
+.project-card {
+  display: flex;
+  align-items: stretch;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* LEFT SIDE (judul vertikal) */
+.project-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* CARD VARIANTS */
+.project-card.pink {
+  background-color: #d88f8f;
+}
+
+.project-card.pink .project-left {
+  background-color: #a74d4d;
+  color: #fff;
+}
+
+.project-card.blue {
+  background-color: #91c4e8;
+}
+
+.project-card.blue .project-left {
+  background-color: #4779a7;
+  color: #fff;
+}
+
+/* CONTENT (gambar + teks) */
+.project-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+.project-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.project-info {
+  color: #000;
+  flex: 1;
+}
+
+.project-info p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn-project {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.project-card.pink .btn-project:hover {
+  background-color: #a74d4d;
+  color: #fff;
+}
+
+.project-card.blue .btn-project:hover {
+  background-color: #4779a7;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-left {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: center;
+  }
+
+  .project-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ===== SKILLS SECTION ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ccc; 
+}
+
+.skill-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  min-height: 100vh;
+  background-color: #ccc;
+}
+
+/* Kolom utama */
+.skill-container {
+  width: 70%;
+  padding: 50px 80px;
+}
+
+.skill-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* Kotak skill */
+.skill-box {
+  background: #e8e8e8;
+  border: 3px solid;
+  border-image: linear-gradient(90deg, #faff00, #d0cc00) 1;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 #4a4a4a;
+  padding: 20px 40px;
+  margin-bottom: 30px;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.icon-row img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.icon-row img:hover {
+  transform: scale(1.1);
+}
+
+/* Bagian kanan hitam bergambar */
+.side-pattern {
+  width: 25%;
+  background: url('img/pattern-bunga.png') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  height: 100vh;
+}
+
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+  background-color: #bfbfbf;
+  padding: 60px 80px;
+  text-align: center;
+  position: relative;
+}
+
+.contact-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.contact-header p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+/* Konten utama (info + form) */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+/* Info kiri */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.contact-info span {
+  color: #00bfff;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.map img {
+  width: 250px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* Form kanan */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+  background-color: #f5f5f5;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00bfff;
+}
+
+.contact-form button {
+  align-self: flex-end;
+  padding: 10px 30px;
+  background-color: #aee1ff;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #6dc6ff;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 15px 0;
+  background-color: #ffff00;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form button {
+    align-self: center;
+  }
+}
