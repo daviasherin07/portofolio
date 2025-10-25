@@ -111,10 +111,9 @@ body {
   margin: 20px 0 40px 0;
 }
 
-/* Warna ikon putih dan ukuran */
 .social-icons a i {
-  color: #fff; /* Putih */
-  font-size: 28px; /* Ukuran ikon */
+  color: #fff; 
+  font-size: 28px; 
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -467,7 +466,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Hilangkan side pattern */
 .side-pattern {
   display: none;
 }
@@ -547,7 +545,7 @@ body {
   text-decoration: underline;
 }
 
-/* ✅ MAP FIX (pakai iframe, bukan img) */
+/* ✅ MAP HIDUP */
 .map iframe {
   width: 100%;
   height: 300px;
@@ -597,8 +595,8 @@ body {
 
 /* Footer */
 .footer {
-  width: 100vw; /* full lebar layar */
-  margin: 0; /* hapus jarak luar */
+  width: 100vw; 
+  margin: 0; 
   padding: 10;
   background-color: #000;
   position: relative;
@@ -617,13 +615,13 @@ body {
 }
 
 .social-icons a {
-  color: #000; /* warna hitam */
+  color: #000; 
   font-size: 28px;
   transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #333; /* sedikit lebih gelap saat hover */
+  color: #333; 
   transform: scale(1.2);
 }
 
