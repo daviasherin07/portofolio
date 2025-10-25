@@ -4,18 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Davia Sherin Faraghiza | Personal Website</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-</head>
-<body>
 
-  
- <!--Home Section--> 
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <style>
+    /* ===== NAVBAR FIXED ===== */
+    .navbar {
+      background-color: #555;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .logo {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+    }
+
+    /* Hover & Active */
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffff00;
+    }
+
+    /* Animasi garis bawah */
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #ffff00;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    /* Supaya konten tidak ketutupan navbar */
+    section {
+      scroll-margin-top: 100px;
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
   <!-- NAVBAR -->
   <header class="navbar">
     <h2 class="logo">Personal Website</h2>
     <nav>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#project">Project</a></li>
         <li><a href="#skills">Skill</a></li>
@@ -24,7 +100,7 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- ====== SECTIONS ====== -->
   <section id="home" class="hero">
     <div class="hero-left">
       <p class="intro">Hi, I’m</p>
@@ -34,18 +110,9 @@
       </p>
 
       <div class="social-icons">
-<!-- IG -->
-<a href="https://www.instagram.com/dviashrn?igsh=aGkzYmUwbXF4eGM3" target="_blank">
-  <img src="assets/icon_ig-removebg-preview.png" alt="Instagram">
-</a>
-<!-- LinkedIn -->
-<a href="https://www.linkedin.com/in/davia-sherin-2a0669382/" target="_blank">
-  <img src="assets/icon linkedin.png" alt="LinkedIn">
-</a>
-<!-- GitHub -->
-<a href="https://github.com/daviasherin07" target="_blank">
-  <img src="assets/icon git.png" alt="GitHub">
-</a>
+        <a href="https://www.instagram.com/dviashrn?igsh=aGkzYmUwbXF4eGM3" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/daviasherin07" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/davia-sherin-2a0669382/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </div>
 
       <a href="#about" class="btn">See More</a>
@@ -57,98 +124,75 @@
   </section>
 
   <!-- ABOUT SECTION -->
-<section class="about-section" id="about">
- <section class="about-section" id="about">
-  <h2 class="section-title">About Us</h2>
-  <div class="about-container">
-
-    <!-- FOTO -->
-    <div class="about-image">
-      <div class="image-frame">
-        <img src="assets/foto sherin.jpeg" alt="Foto Davia Sherin Faraghiza">
-        <span class="dot top-right"></span>
-        <span class="dot bottom-left"></span>
+  <section class="about-section" id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-container">
+      <div class="about-image">
+        <div class="image-frame">
+          <img src="assets/foto sherin.jpeg" alt="Foto Davia Sherin Faraghiza">
+          <span class="dot top-right"></span>
+          <span class="dot bottom-left"></span>
+        </div>
       </div>
-    </div>
 
-    <!-- TEKS -->
-    <div class="about-content">
-      <div class="quote-icon">❝</div>
-      <h3><span class="highlight">HELLO!</span></h3>
-      <p>
-        Saya Davia Sherin Faraghiza, seorang Mahasiswa di Universitas MH Thamrin dengan Program Studi
-        Sistem Informasi yang memiliki ketertarikan di bidang desain UI/UX.
-      </p>
-      <p>
-        Saya percaya desain adalah proses memahami manusia dan menciptakan pengalaman yang bermakna.
-        Sebagai seseorang yang masih belajar di dunia UI/UX Design, saya bersemangat untuk terus
-        berkembang dan suatu hari berkontribusi lewat solusi digital yang berguna.
-      </p>
-      <div class="quote-end">❞</div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- PROJECT SECTION -->
-<section id="project" class="project">
-  <h2 class="section-title">Project</h2>
-
-  <!-- CARD 1 -->
-  <div class="project-card pink">
-    <div class="project-left">
-      <h3 class="project-title-vertical">E-campus</h3>
-    </div>
-
-    <div class="project-content">
-      <img src="assets/logo ecampus.jpeg" alt="E-campus App" class="project-img">
-      <div class="project-info">
+      <div class="about-content">
+        <div class="quote-icon">❝</div>
+        <h3><span class="highlight">HELLO!</span></h3>
         <p>
-          Aplikasi Android sederhana yang dibuat dengan Android Studio untuk membantu pendataan mahasiswa.
-          Mulai dari melihat data, menambah, mengedit, menghapus, hingga menampilkan informasi kampus.
+          Saya Davia Sherin Faraghiza, seorang Mahasiswa di Universitas MH Thamrin dengan Program Studi
+          Sistem Informasi yang memiliki ketertarikan di bidang desain UI/UX.
         </p>
-        <a
-        href="https://www.figma.com/design/X0yBT6oKnDq01ctzUS8Rda/Ecampus?node-id=0-1&t=S5tmMBHdLc3iAbur-1" 
-        class="btn-project" 
-        target="_blank">
-        View Project
-        </a>
+        <p>
+          Saya percaya desain adalah proses memahami manusia dan menciptakan pengalaman yang bermakna.
+          Sebagai seseorang yang masih belajar di dunia UI/UX Design, saya bersemangat untuk terus
+          berkembang dan suatu hari berkontribusi lewat solusi digital yang berguna.
+        </p>
+        <div class="quote-end">❞</div>
       </div>
     </div>
-  </div>
+  </section>
 
- <!-- CARD 2 -->
-<div class="project-card blue">
-  <div class="project-left">
-    <h3 class="project-title-vertical">Belajarin Aja Yuk!</h3>
-  </div>
+  <!-- PROJECT SECTION -->
+  <section id="project" class="project">
+    <h2 class="section-title">Project</h2>
 
-  <div class="project-content">
-    <img src="assets/icon logo playstore (belajarin aja yuk!)-01.png" alt="Belajarin Aja Yuk App" class="project-img">
-    <div class="project-info">
-      <p>
-        Saya membuat prototype aplikasi menggunakan Figma sebagai bagian dari tugas sekaligus untuk
-        menampilkan kemampuan saya dalam UI/UX Design. Aplikasi ini bersifat media pembelajaran, dan pada
-        proyek ini saya berperan di bagian editing desain Figma untuk menyempurnakan tampilan serta alur pengguna.
-      </p>
-
-      <!-- Tombol dengan link Figma -->
-      <a 
-        href="https://www.figma.com/design/0rTrfKY8kdZUvLv4yz46CY/Belajarin-Aja-YUK-?node-id=0-1&t=CKjDR6qz3OKk1CMD-1" 
-        class="btn-project" 
-        target="_blank">
-        View Project
-      </a>
+    <!-- CARD 1 -->
+    <div class="project-card pink">
+      <div class="project-left">
+        <h3 class="project-title-vertical">E-campus</h3>
+      </div>
+      <div class="project-content">
+        <img src="assets/logo ecampus.jpeg" alt="E-campus App" class="project-img">
+        <div class="project-info">
+          <p>
+            Aplikasi Android sederhana yang dibuat dengan Android Studio untuk membantu pendataan mahasiswa.
+          </p>
+          <a href="https://www.figma.com/design/X0yBT6oKnDq01ctzUS8Rda/Ecampus?node-id=0-1&t=S5tmMBHdLc3iAbur-1" 
+             class="btn-project" target="_blank">View Project</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</section>
 
+    <!-- CARD 2 -->
+    <div class="project-card blue">
+      <div class="project-left">
+        <h3 class="project-title-vertical">Belajarin Aja Yuk!</h3>
+      </div>
+      <div class="project-content">
+        <img src="assets/icon logo playstore (belajarin aja yuk!)-01.png" alt="Belajarin Aja Yuk App" class="project-img">
+        <div class="project-info">
+          <p>
+            Prototype aplikasi media pembelajaran yang dibuat di Figma untuk menampilkan kemampuan UI/UX Design.
+          </p>
+          <a href="https://www.figma.com/design/0rTrfKY8kdZUvLv4yz46CY/Belajarin-Aja-YUK-?node-id=0-1&t=CKjDR6qz3OKk1CMD-1"
+             class="btn-project" target="_blank">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- SKILL SECTION -->
-
-  <section class="skill-section">
+  <!-- SKILL SECTION -->
+  <section class="skill-section" id="skills">
     <div class="skill-container">
       <h2 class="skill-title">SKILL</h2>
 
@@ -179,54 +223,71 @@
         </div>
       </div>
     </div>
-
-    <div class="side-pattern"></div>
   </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="contact">
-  <div class="contact-header">
-    <h2>AYO BERKOLABORASI</h2>
-    <p>Saya siap bekerja sama. Hubungi saya, dan ayo kita mulai proyek luar biasa kita!</p>
-  </div>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="contact-header">
+      <h2>AYO BERKOLABORASI</h2>
+      <p>Saya siap bekerja sama. Hubungi saya, dan ayo kita mulai proyek luar biasa kita!</p>
+    </div>
 
-  <div class="contact-container">
-    <!-- Left: Info -->
-    <div class="contact-info">
-      <h3><span>CONTACT</span> <strong>ME</strong></h3>
-
-      <p><b>Address :</b> Jl. Komplek Polri Ciracas, Jakarta Timur, 13740.</p>
-      <div class="map">
-        <img src="assets/map.jpeg" alt="Map location">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3><span>CONTACT</span> <strong>ME</strong></h3>
+        <p><b>Address :</b> Jl. Komplek Polri Ciracas, Jakarta Timur.</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps?q=-6.332733,106.873909&hl=id&z=17&output=embed"
+            allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <p><b>Phone :</b> +62 815-8656-7280</p>
+        <p><b>Email :</b> sherinfaraghiza7@gmail.com</p>
+        <p><b>Github :</b> 
+          <a href="https://github.com/daviasherin07" target="_blank">
+            github.com/daviasherin07
+          </a>
+        </p>
       </div>
 
-      <p><b>Phone :</b> +62 815-8656-7280</p>
-      <p><b>Email :</b> sherinfaraghiza7@gmail.com</p>
-      <p><b>Github :</b> 
-        <a href="https://github.com/daviasherin07" target="_blank">
-          github.com/daviasherin07
-        </a>
-      </p>
+      <form class="contact-form">
+        <input type="text" placeholder="Email" required>
+        <input type="text" placeholder="Name" required>
+        <textarea placeholder="Message" rows="4" required></textarea>
+        <button type="submit">SEND</button>
+      </form>
     </div>
 
-    <!-- Right: Form -->
-    <form class="contact-form">
-      <input type="text" placeholder="Email" required>
-      <input type="text" placeholder="Name" required>
-      <textarea placeholder="Message" rows="4" required></textarea>
-      <button type="submit">SEND</button>
-    </form>
-  </div>
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/dviashrn?igsh=aGkzYmUwbXF4eGM3" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/6281586567280" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/davia-sherin-2a0669382/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </footer>
+  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="social-icons">
-      <a href="#"><img src="assets/icon_ig-removebg-preview.png" alt="Instagram"></a>
-      <a href="#"><img src="assets/" alt="WA"></a>
-      <a href="#"><img src="assets/" alt="facebook"></a>
-      <a href="#"><img src="assets/icon linkedin.png" alt="LinkedIn"></a>
-    </div>
-  </footer>
-</section>
+  <!-- JS: Buat navbar aktif pas scroll -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 </body>
 </html>

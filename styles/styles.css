@@ -105,19 +105,23 @@ body {
 /* SOCIAL ICONS */
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
   margin: 20px 0 40px 0;
 }
 
-.social-icons a img {
-  width: 30px;
-  height: 30px;
-  filter: invert(1);
-  transition: transform 0.3s ease;
+/* Warna ikon putih dan ukuran */
+.social-icons a i {
+  color: #fff; /* Putih */
+  font-size: 28px; /* Ukuran ikon */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-icons a img:hover {
-  transform: scale(1.15);
+/* Efek hover */
+.social-icons a i:hover {
+  transform: scale(1.2);
+  color: #4779a7; 
 }
 
 /* BUTTON */
@@ -135,7 +139,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #e6e6e6;
+  background-color: #4779a7;
   transform: translateY(-2px);
 }
 
@@ -271,7 +275,7 @@ body {
 
 /* ===== PROJECT SECTION ===== */
 .project {
-  background-color: #a8a8a8;
+  background-color: #d9d9d9;
   padding: 80px 60px;
 }
 
@@ -400,54 +404,57 @@ body {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #ccc; 
+  background-color: #ccc;
 }
 
 .skill-section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  position: relative;
   min-height: 100vh;
-  background-color: #ccc;
+  background-color: #d9d9d9;
 }
 
 /* Kolom utama */
 .skill-container {
-  width: 70%;
-  padding: 50px 80px;
+  width: 100%;
+  padding: 80px 100px;
 }
 
 .skill-title {
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 700;
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  color: #000;
 }
 
 /* Kotak skill */
 .skill-box {
   background: #e8e8e8;
-  border: 3px solid;
+  border: 3px solid transparent;
   border-image: linear-gradient(90deg, #faff00, #d0cc00) 1;
-  border-radius: 4px;
-  box-shadow: 4px 4px 0 #4a4a4a;
-  padding: 20px 40px;
+  border-radius: 8px;
+  padding: 40px;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .label {
-  font-weight: 500;
-  font-size: 14px;
-  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
   text-align: left;
+  color: #000;
 }
 
+/* Deretan icon */
 .icon-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 80px;
+  flex-wrap: wrap;
 }
 
 .icon-row img {
@@ -460,19 +467,30 @@ body {
   transform: scale(1.1);
 }
 
-/* Bagian kanan hitam bergambar */
+/* Hilangkan side pattern */
 .side-pattern {
-  width: 25%;
-  background: url('img/pattern-bunga.png') no-repeat center center;
-  background-size: cover;
-  background-color: #000;
-  height: 100vh;
+  display: none;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .skill-container {
+    padding: 40px 30px;
+  }
+
+  .icon-row {
+    gap: 40px;
+  }
+
+  .icon-row img {
+    width: 60px;
+  }
 }
 
 
 /* ===== CONTACT SECTION ===== */
 .contact {
-  background-color: #bfbfbf;
+  background-color: #d9d9d9;
   padding: 60px 80px;
   text-align: center;
   position: relative;
@@ -529,8 +547,11 @@ body {
   text-decoration: underline;
 }
 
-.map img {
-  width: 250px;
+/* ✅ MAP FIX (pakai iframe, bukan img) */
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
   border-radius: 10px;
   margin: 10px 0;
 }
@@ -571,14 +592,20 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #6dc6ff;
+  background-color: #2F28DB;
 }
 
 /* Footer */
 .footer {
-  margin-top: 40px;
-  padding: 15px 0;
-  background-color: #ffff00;
+  width: 100vw; /* full lebar layar */
+  margin: 0; /* hapus jarak luar */
+  padding: 10;
+  background-color: #000;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .social-icons {
@@ -586,17 +613,20 @@ body {
   justify-content: center;
   align-items: center;
   gap: 25px;
+  margin-top: 20px;
 }
 
-.social-icons img {
-  width: 24px;
-  height: 24px;
+.social-icons a {
+  color: #000; /* warna hitam */
+  font-size: 28px;
   transition: 0.3s ease;
 }
 
-.social-icons img:hover {
+.social-icons a:hover {
+  color: #333; /* sedikit lebih gelap saat hover */
   transform: scale(1.2);
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
